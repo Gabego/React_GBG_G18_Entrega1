@@ -5,9 +5,10 @@ import quotes from './json/quotes.json'
 import QuoteBox from './components/QuoteBox'
 import color from './utils/color'
 
+
 function App() {
-  
-  
+
+
 
   const getIndexRandom = arr => Math.floor(Math.random() * arr.length)
 
@@ -22,17 +23,18 @@ function App() {
   const backgroundObject = {
     backgroundColor: randomColor
   }
-//Calculo de Quote y Color Aleatorio 1:32:19
-  const getRandomAll =() => {
+  //Calculo de Quote y Color Aleatorio 1:32:19
+  const getRandomAll = () => {
     setRandomQuote(quotes[getIndexRandom(quotes)])
     setRandomColor(color[getIndexRandom(color)])
   }
   return (
     <div style={backgroundObject} className="App">
       <QuoteBox
-       randomQuote={randomQuote}
-       randomColor={randomColor}
-       getRandomAll={getRandomAll} />
+        randomQuote={randomQuote}
+        randomColor={randomColor}
+        getRandomAll={getRandomAll} />
+
     </div>
   )
 }
